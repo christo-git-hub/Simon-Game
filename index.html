@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+   <div id="popup-window" class="popup">
+  <div class="popup-content">
+    <span id="close-btn" class="close">&times;</span>
+    <h2>Welcome to the Simon Game!</h2>
+    <p>When the game starts, a colored button will flash along with a sound. Your task is to remember the sequence of colors as they appear.
+      After each round, a new color is added to the sequence. You need to repeat the entire pattern in the correct order by clicking the same colored buttons.<br>Start the game by pressing any button.
+    </p>
+  </div>
+</div>
+
+  <h1 id="level-title">Press A Key to Start</h1>
+  <div class="container">
+    <div class="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/game.js"></script>
+</body>
+
+</html>
