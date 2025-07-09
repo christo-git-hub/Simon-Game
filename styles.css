@@ -88,3 +88,27 @@ body {
   font-size: 25px;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  #level-title {
+    font-size: 2rem;
+    margin: 10% 5%;
+    cursor: pointer;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .btn {
+    height: 130px;
+    width: 130px;
+    margin: 15px;
+  }
+
+  .popup-content {
+    top: 45px;
+    width: 50%;
+    font-size: 18px;
+  }
+}
