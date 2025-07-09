@@ -1,6 +1,12 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 #level-title {
@@ -23,8 +29,8 @@ body {
 .btn {
   margin: 25px;
   display: inline-block;
-  width: 40vw;
-  height: 40vw;
+  width: 50vw;
+  height: 50vw;
   max-width: 200px;
   max-height: 200px;
 
@@ -97,9 +103,16 @@ body {
 
 /* Responsive adjustments for small screens */
 @media (max-width: 800px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+    justify-content: flex-start; /* keep content near the top */
+    padding-top: 5vh;            /* small offset from the very top */
+  }
+
   #level-title {
     font-size: 2rem;
-    margin: 10% 5%;
+    margin: 5% 5%;
     cursor: pointer;
   }
 
