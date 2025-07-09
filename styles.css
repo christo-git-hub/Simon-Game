@@ -11,8 +11,11 @@ body {
 }
 
 .container {
-  display: block;
-  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  max-width: 600px;
   margin: auto;
 
 }
@@ -20,8 +23,11 @@ body {
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  width: 40vw;
+  height: 40vw;
+  max-width: 200px;
+  max-height: 200px;
+
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -90,7 +96,7 @@ body {
 }
 
 /* Responsive adjustments for small screens */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #level-title {
     font-size: 2rem;
     margin: 10% 5%;
@@ -110,6 +116,6 @@ body {
   .popup-content {
     top: 45px;
     width: 50%;
-    font-size: 18px;
+    font-size: 17px;
   }
 }
