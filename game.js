@@ -41,17 +41,28 @@ function animatePress(currentColour){
 function checkAnswer(userChosenColour){
   
     if(gamePattern[userClickedPattern.length-1]!=userClickedPattern[userClickedPattern.length-1]){
-      $("#level-title").html('Game Over <br> Press a key to restart');
-        $("body").addClass("game-over");
-        setTimeout(() => {
-          $("body").removeClass("game-over");
-        }, 200);
-        playSound("wrong");
-        gameActive= false;
-        userClickedPattern= [];
-        gamePattern=[];
-        level=0;
-        return;
+      if (window.innerWidth <= 600) {
+        $("#level-title").html("Game Over<br>Tap here to restart");
+        $("#level-title").on("click", function restartOnMobile() {
+          if (!gameActive && level === 0) {
+            gameActive = true;
+            nextSequence();
+            $("#level-title").off("click", restartOnMobile);
+          }
+        });
+      } else {
+        $("#level-title").html("Game Over<br>Press a key to restart");
+      }
+      $("body").addClass("game-over");
+      setTimeout(() => {
+        $("body").removeClass("game-over");
+      }, 200);
+      playSound("wrong");
+      gameActive= false;
+      userClickedPattern= [];
+      gamePattern=[];
+      level=0;
+      return;
     }
 
     else
@@ -69,6 +80,24 @@ $(document).keydown(function () {
     nextSequence();
   }
 });
+
+// For smaller screens, start game by clicking the title
+function enableMobileStart() {
+  if (window.innerWidth <= 600) {
+    $("#level-title").text("Tap here to start");
+    $("#level-title").on("click", function startOnMobile() {
+      if (!gameActive && level === 0) {
+        gameActive = true;
+        nextSequence();
+        $("#level-title").off("click", startOnMobile);
+      }
+    });
+  }
+}
+
+// Run on load and on resize
+window.addEventListener("load", enableMobileStart);
+window.addEventListener("resize", enableMobileStart);
 
 window.addEventListener('load', function () {
   const popup = document.getElementById('popup-window');
