@@ -83,7 +83,7 @@ $(document).keydown(function () {
 
 // For smaller screens, start game by clicking the title
 function enableMobileStart() {
-  if (window.innerWidth <= 600) {
+  if (window.innerWidth <= 800) {
     $("#level-title").text("Tap here to start");
     $("#level-title").on("click", function startOnMobile() {
       if (!gameActive && level === 0) {
