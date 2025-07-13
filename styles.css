@@ -121,14 +121,17 @@ body {
   }
 
   .btn {
-    height: 130px;
-    width: 130px;
+    height: 160px;
+    width: 160px;
     margin: 15px;
   }
 
   .popup-content {
     top: 45px;
-    width: 50%;
-    font-size: 17px;
+    width: 60vw;         /* Almost full width on mobile */
+    max-width: 95vw;     /* Prevent overflow */
+    min-width: 0;        /* Allow shrinking */
+    font-size: 18px;     /* Slightly smaller text */
+    padding: 10px; 
   }
 }
