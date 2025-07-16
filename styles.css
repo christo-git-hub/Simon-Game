@@ -20,9 +20,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
+  width: 95%;
   max-width: 600px;
-  margin: auto;
+  margin: 0;
+  padding: 8px;
 
 }
 
@@ -106,32 +107,40 @@ body {
   body {
     height: 100vh;
     overflow: hidden;
-    justify-content: flex-start; /* keep content near the top */
-    padding-top: 5vh;            /* small offset from the very top */
+    justify-content: center;  /* center vertically again */
+    align-items: center;      /* center horizontally */
+    padding-top: 0;
   }
 
   #level-title {
-    font-size: 2rem;
+    font-size: 10vw;
     margin: 5% 5%;
     cursor: pointer;
   }
 
   .container {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
 
   .btn {
-    height: 160px;
-    width: 160px;
-    margin: 15px;
+    width: 40vw;
+    height: 40vw;
+    max-width: none;
+    max-height: none;
+    margin: 5vw 2vw;
   }
 
   .popup-content {
-    top: 45px;
-    width: 60vw;         /* Almost full width on mobile */
-    max-width: 95vw;     /* Prevent overflow */
-    min-width: 0;        /* Allow shrinking */
-    font-size: 18px;     /* Slightly smaller text */
-    padding: 10px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    font-size: 16px;
+    padding: 12px;
   }
 }
